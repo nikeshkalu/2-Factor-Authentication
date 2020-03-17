@@ -7,32 +7,70 @@
     <title>Login Authentication</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Cache-control" content="no-cache">
-    <link rel="stylesheet" type="text/css" href="/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <h1>Welcome to 2FA with Face Recognition</h1>
 
     <div>
-        <form action="http://127.0.0.1:8000/login" method="GET">
-            <label class="login" id="loginTop">Username</label>
-            <input type="text" name="username">
-            <label class="login" id="loginTop "> Password</label>
+        <form action="http://127.0.0.1:8000/login" method="POST">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                        <div class="card card-signin my-5">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Two factor Authentication </h5>
+                                <form class="form-signin">
+                                    <div class="form-label-group">
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email">
+                                        <label for="inputEmail">Email address</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password">
+                                        <label for="inputPassword">Password</label>
+                                    </div>
+
+                                    <!-- <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button> -->
+                                    <input type="submit" class="btn btn-lg btn-primary btn-block text-uppercase" value="Login">
+
+                                    <hr class="my-4">
+                                    <!-- <input type="submit" class="btn btn-lg btn-primary btn-block text-uppercase" name="signup" value="Sign up"> -->
+
+
+                                </form>
+                                <a href="./signup.html" class="btn btn-lg btn-primary btn-block text-uppercase">Sign Up</a>
+                                <!-- <form action="http://127.0.0.1:8000/signup" method="POST">
+
+                                    <input type="submit" class="btn btn-lg btn-primary btn-block text-uppercase" name="signup" value="Sign up">
+
+
+                                </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Username:
+            <input type="text" name="username"><br> Password:
             <input type="password" name="password">
-            <input id="button" type="submit" value="Submit">
+            <br>
+            <input id="button" type="submit" value="Login"> -->
 
         </form>
 
-        <form action="http://127.0.0.1:8000/signup">
-            <input type="submit" value="signup" name="signup">
 
-        </form>
 
 
     </div>
 
 
 
+
 </body>
 
-</html
+</html>

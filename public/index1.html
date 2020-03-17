@@ -6,30 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <h1>2nd part</h1>
-    
-    <div>
-        <video class="part2" id="player" autoplay width="640" height="480"></video>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                   <video class="form-label-group" id="player" autoplay width="440" height="440"></video>
+
+                    <!--<button id="capturebutton" onclick="capButton()" class="btn btn-lg btn-primary btn-block text-uppercase">Capture</button>-->
+                    <form id="uploadForm" action="http://127.0.0.1:8000/upload2" method="POST">
+                        <input id="capturebuttons" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Take the photo" />
+                        
+ 
+
+
+
+                    </form>
+
+                    <canvas class="part2" id="canvas" width="440" height="440"></canvas>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <button id="capturebutton" onclick="capButton()">Capture</button>
-        <form id="uploadForm" action="http://127.0.0.1:8000/upload" method="POST">
-            <input id="fileInput" type="text" name="fileData" />
-            <input id="capturebutton " type="submit" value="Upload!" s/>
 
-        </form>
-    </div>
     <div>
-        <canvas class="part2" id="canvas" width="640" height="480"></canvas>
+        <canvas class="part2" id="canva" width="440" height="440"></canvas>
     </div>
 
 
-
-    <script src="/public/js/main.js"></script>
+    <script src="js/main.js"></script>
 
 
 
