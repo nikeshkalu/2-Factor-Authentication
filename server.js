@@ -1,7 +1,3 @@
-//For mongo
-//userName:nikeskalu@gmail.com
-//password:nikesh123
-//authentication database:UserProfile
 
 var express = require('express');
 var app = express();
